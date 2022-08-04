@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo" onmouseover="mouseIn()" onmouseout="mouseOut()" ></div>
+    <button id="change" onclick="changeColor()">change</button>
+    <section>
+        <form action="">
+            <label for="FNum">First Number</label>
+            <input type="number" name="" id="fNum" required>
+            <br>
+            <label for="SNum">Second Number</label>
+            <input type="number" name="" id="sNum" required>
+            <br>
+            <input type="button" name="" id="button" value="sum">
+        </form>
+    </section>
+    <section>
+        <form action="">
+            <label for="FisrtName">First Number</label>
+            <input type="name" name="" id="fName" required>
+            <br>
+            <label for="lastName">Second Number</label>
+            <input type="name" name="" id="lName" required>
+            <br>
+            <input type="button" name="" id="but" value="summit">
+        </form>
+    </section>
+    <style>
+        #demo, #change{
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        #demo{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        #change{
+            display: block;
+            padding: 10px 40px;
+            background-color: greenyellow;
+            color: #fff;
+            border: none;
+        }
+    </style>
+    <script>
+        const btn = document.getElementById("change");
+        const div = document.getElementById("demo");
+
+        const arrOfColors = ["blue", "cyan", "red","brown","yellow", "blue" , "white" , "green"]
+
+        function changeColor(){
+            // div.style.backgroundColor = arrOfColors[Math.floor(Math.random() * arrOfColors.length)]
+            // div.innerHTML = "successful"
+            // div.style.border = "none"
+            div.innerHTML= '<img src="https://www.azflowerpictures.com/wp-content/uploads/2020/09/Beautiful-Sunflower.jpg"alt"">'
+
+            }
+        
+        const mouseIn = function(){
+            div.innerHTML = "your mouse is on the div";
+        }
+        const mouseOut = () => div.innerHTML="your mouse is out of the div";
+
+         btn.onclick = function(){
+             changeColor( );
+         }
+        // div.onmouseover = () => mouseIn()
+        // div.onmouseout = () => mouseOut()
+        
+    </script>
+    <script>
+        const fisrtNum = document.getElementById("fNum");
+        const secondNum = document.getElementById("sNum");
+        const button = document.getElementById("button");
+
+         button.onclick = ()=>{
+            alert(parseInt(fisrtNum.value) + parseInt(secondNum.value))
+        }
+
+        
+        const FisrtName = document.getElementById("fName");
+        const lastName = document.getElementById("lName");
+        const alertbutton = document.getElementById("but");
+
+        alertbutton.onclick = ()=>{
+            alert((FisrtName.value) + " " + (lastName.value))
+        }
+
+       
+    
+    </script>
+</body>
+</html>
